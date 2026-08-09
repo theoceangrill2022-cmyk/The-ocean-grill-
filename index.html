@@ -3,481 +3,870 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>The Ocean Grill Kitchen & Bar | Calangute, Goa</title>
-<meta name="description" content="The Ocean Grill Kitchen & Bar at Falcon Resort, Naika Vaddo, Calangute, Goa.">
+
+<meta name="description" content="The Ocean Grill Kitchen & Bar in Calangute, Goa. Enjoy Goan, Indian, English-inspired and Chinese cuisine, seafood, grills, desserts and drinks.">
+
 <style>
-:root{
---bg:#0b1114;--panel:#101a1e;--cream:#f4eee2;
---muted:#b9c0bd;--gold:#d5ad67;--line:rgba(255,255,255,.12)
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-margin:0;background:var(--bg);color:var(--cream);
-font-family:Arial,system-ui,sans-serif;line-height:1.6
+  background:#090909;
+  color:#f4eee2;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
 }
-a{color:inherit;text-decoration:none}
-.container{width:min(1160px,92%);margin:auto}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1160px,92%);
+  margin:auto;
+}
+
+/* NAVIGATION */
 
 nav{
-position:fixed;top:0;left:0;right:0;z-index:20;
-background:rgba(8,12,14,.88);
-backdrop-filter:blur(14px);
-border-bottom:1px solid var(--line)
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:rgba(5,5,5,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.12);
 }
+
 .navin{
-height:72px;display:flex;align-items:center;
-justify-content:space-between
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
-.brand img{height:50px;width:auto}
-.links{display:flex;gap:22px;font-size:14px;color:#ddd}
-.links a:hover{color:var(--gold)}
-.mobile{display:none}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:bold;
+}
+
+.brand img{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  border-radius:50%;
+}
+
+.links{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  font-size:14px;
+}
+
+.links a:hover{
+  color:#d5ad67;
+}
+
+.mobile{
+  display:none;
+}
+
+/* HERO */
 
 .hero{
-min-height:92vh;display:grid;place-items:center;
-position:relative;overflow:hidden
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  padding-top:72px;
+  background:
+    linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.78)),
+    url("IMG_20240309_142659.jpg") center/cover no-repeat;
 }
-.hero:before{
-content:"";position:absolute;inset:0;
-background:
-linear-gradient(90deg,rgba(5,9,11,.82),rgba(5,9,11,.36)),
-url('IMG_20240403_133943.jpg') center/cover
-}
+
 .hero-content{
-position:relative;padding:120px 0 80px;max-width:850px
+  text-align:center;
+  padding:100px 20px;
+  max-width:850px;
 }
+
 .hero-logo{
-width:min(430px,80vw);max-height:145px;
-object-fit:contain;margin-bottom:22px
+  width:110px;
+  height:110px;
+  object-fit:contain;
+  margin-bottom:20px;
 }
-.kicker,.eyebrow{
-color:var(--gold);letter-spacing:.18em;
-text-transform:uppercase;font-size:12px;font-weight:700
+
+.kicker{
+  color:#d5ad67;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-size:14px;
+  margin-bottom:15px;
 }
-h1{
-font-family:Georgia,serif;
-font-size:clamp(48px,8vw,92px);
-line-height:.95;margin:18px 0
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(48px,8vw,90px);
+  line-height:1;
+  margin-bottom:20px;
+  color:#f4eee2;
 }
-.hero p{font-size:20px;color:#e0e2de;max-width:650px}
+
+.hero p{
+  font-size:20px;
+  color:#ddd;
+  max-width:680px;
+  margin:auto;
+}
 
 .actions{
-display:flex;flex-wrap:wrap;gap:12px;margin-top:28px
-}
-.btn{
-display:inline-flex;padding:13px 20px;
-border:1px solid rgba(255,255,255,.25);
-border-radius:999px;font-weight:700
-}
-.btn.primary{
-background:var(--gold);color:#111;border-color:var(--gold)
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
 }
 
-section{padding:90px 0}
-.section-head{margin-bottom:30px}
+.btn{
+  display:inline-block;
+  padding:13px 21px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:999px;
+  font-weight:bold;
+  background:rgba(0,0,0,.35);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn.primary{
+  background:#d5ad67;
+  color:#111;
+}
+
+/* SECTIONS */
+
+section{
+  padding:90px 0;
+}
+
+.section-head{
+  margin-bottom:30px;
+}
+
+.eyebrow{
+  color:#d5ad67;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-size:13px;
+  margin-bottom:5px;
+}
+
 h2{
-font-family:Georgia,serif;font-size:42px;margin:5px 0
+  font-family:Georgia,serif;
+  font-size:42px;
 }
 
 .about{
-display:grid;grid-template-columns:1.1fr .9fr;gap:55px
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
 }
-.about p{color:var(--muted);font-size:17px}
+
+.about p{
+  color:#b9c0c0;
+  font-size:17px;
+  margin-bottom:18px;
+}
+
+.card{
+  background:#151515;
+  border:1px solid rgba(255,255,255,.12);
+  padding:25px;
+  border-radius:18px;
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#d5ad67;
+  font-family:Georgia,serif;
+}
+
+/* CUISINE */
 
 .cards{
-display:grid;grid-template-columns:repeat(4,1fr);gap:14px
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
 }
-.card{
-background:var(--panel);padding:24px;
-border:1px solid var(--line);border-radius:18px
+
+.card p{
+  color:#b9c0c0;
+  font-size:14px;
 }
-.card h3{margin:8px 0;font-family:Georgia,serif}
-.card p{color:var(--muted);font-size:14px}
+
+/* MENU */
 
 .menu-intro{
-color:var(--muted);font-size:17px;
-max-width:760px;margin-bottom:30px
+  color:#b9c0c0;
+  font-size:17px;
+  max-width:760px;
+  margin-bottom:30px;
 }
+
 .menu-grid{
-display:grid;grid-template-columns:repeat(2,1fr);gap:18px
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
+
 .menu-page{
-background:var(--panel);
-border:1px solid var(--line);
-border-radius:18px;overflow:hidden
+  background:#151515;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  overflow:hidden;
 }
-.menu-page img{width:100%;display:block}
-.menu-page:first-child{grid-column:1/-1}
+
+.menu-page img{
+  width:100%;
+  display:block;
+  height:auto;
+}
+
+.menu-page:first-child{
+  grid-column:1/-1;
+}
+
+/* GALLERY */
 
 .gallery{
-display:grid;grid-template-columns:repeat(12,1fr);
-grid-auto-rows:180px;gap:12px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
 }
-.gallery img{
-width:100%;height:100%;object-fit:cover;
-border-radius:16px;display:block
-}
-.g1{grid-column:span 5;grid-row:span 2}
-.g2{grid-column:span 4}
-.g3{grid-column:span 3}
-.g4{grid-column:span 3}
-.g5{grid-column:span 4}
-.g6{grid-column:span 5}
 
-.video-wrap{
-border-radius:22px;overflow:hidden;
-border:1px solid var(--line);background:#000
+.gallery img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:18px;
+  display:block;
+  transition:.3s;
 }
-.video-wrap video{
-width:100%;display:block;max-height:620px
+
+.gallery img:hover{
+  transform:scale(1.02);
 }
+
+.gallery video{
+  width:100%;
+  border-radius:18px;
+  grid-column:1/-1;
+  display:block;
+  background:#000;
+  max-height:650px;
+}
+
+/* CONTACT */
 
 .contact{
-display:grid;grid-template-columns:1fr 1fr;gap:20px
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
 }
+
 .contact-box{
-background:var(--panel);
-border:1px solid var(--line);
-padding:28px;border-radius:20px
+  background:#151515;
+  border:1px solid rgba(255,255,255,.12);
+  padding:28px;
+  border-radius:20px;
 }
+
 .contact-box strong{
-display:block;color:var(--gold);
-font-size:12px;letter-spacing:.15em;
-text-transform:uppercase;margin-bottom:6px
+  display:block;
+  color:#d5ad67;
+  font-size:12px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-bottom:7px;
 }
+
+.contact-box a{
+  color:#f4eee2;
+}
+
+.contact-box a:hover{
+  color:#d5ad67;
+}
+
+/* FOOTER */
 
 footer{
-border-top:1px solid var(--line);
-padding:30px 0;color:#9ca5a2;font-size:13px
+  border-top:1px solid rgba(255,255,255,.12);
+  padding:30px 0;
+  color:#999;
+  font-size:13px;
+  text-align:center;
 }
 
+/* MOBILE */
+
 @media(max-width:800px){
-.links{display:none}
-.mobile{display:block}
-.navin{height:62px}
-.hero{min-height:88vh}
-.hero-content{padding-top:100px}
-.about,.contact{grid-template-columns:1fr}
-.cards{grid-template-columns:1fr 1fr}
-.menu-grid{grid-template-columns:1fr}
-.menu-page:first-child{grid-column:auto}
-.gallery{
-grid-template-columns:1fr 1fr;
-grid-auto-rows:180px
-}
-.gallery>*{
-grid-column:span 1!important;
-grid-row:span 1!important
-}
-h2{font-size:34px}
-.hero p{font-size:17px}
+
+  .links{
+    display:none;
+  }
+
+  .mobile{
+    display:inline-block;
+    padding:10px 15px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:999px;
+  }
+
+  .hero{
+    min-height:90vh;
+  }
+
+  .hero-content{
+    padding:80px 15px;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .menu-grid{
+    grid-template-columns:1fr;
+  }
+
+  .menu-page:first-child{
+    grid-column:auto;
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gallery img{
+    height:220px;
+  }
+
+  .contact{
+    grid-template-columns:1fr;
+  }
 }
 
 @media(max-width:500px){
-.cards{grid-template-columns:1fr}
-.gallery{grid-template-columns:1fr}
-.gallery>*{height:260px}
+
+  section{
+    padding:70px 0;
+  }
+
+  h2{
+    font-size:34px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery img{
+    height:260px;
+  }
+
+  .hero h1{
+    font-size:45px;
+  }
+
+  .hero-logo{
+    width:90px;
+    height:90px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
-<div class="container navin">
+  <div class="container navin">
 
-<a class="brand" href="#">
-<img src="logo.jpg" alt="The Ocean Grill Kitchen & Bar">
-</a>
+    <a class="brand" href="#home">
+      <img src="logo.jpg" alt="The Ocean Grill Kitchen & Bar logo">
+      <span>The Ocean Grill</span>
+    </a>
 
-<div class="links">
-<a href="#about">About</a>
-<a href="#cuisine">Cuisine</a>
-<a href="#menu">Menu</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#cuisine">Cuisine</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-<a class="mobile" href="tel:+919356013294">Call</a>
+    <a class="mobile" href="tel:+919356013294">Call</a>
 
-</div>
+  </div>
 </nav>
 
-<header class="hero">
-<div class="container hero-content">
 
-<img class="hero-logo" src="logo.jpg" alt="The Ocean Grill Kitchen & Bar logo">
+<!-- HERO -->
 
-<div class="kicker">Kitchen & Bar • Calangute, Goa</div>
+<header class="hero" id="home">
 
-<h1>The Ocean Grill</h1>
+  <div class="hero-content">
 
-<p>
-A relaxed Goa dining experience bringing together bold flavours,
-a welcoming bar, and the easy-going spirit of Calangute.
-</p>
+    <img
+      class="hero-logo"
+      src="logo.jpg"
+      alt="The Ocean Grill Kitchen & Bar logo">
 
-<div class="actions">
+    <div class="kicker">
+      Kitchen & Bar • Calangute, Goa
+    </div>
 
-<a class="btn primary" href="tel:+919356013294">
-Call +91 93560 13294
-</a>
+    <h1>The Ocean Grill</h1>
 
-<a class="btn" target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=The%20Ocean%20Grill%2C%20Falcon%20Resort%2C%20Naika%20Vaddo%2C%20Calangute%2C%20Goa%20403525">
-Get Directions
-</a>
+    <p>
+      A relaxed Goa dining experience bringing together
+      bold flavours, a welcoming bar and the easy-going
+      spirit of Calangute.
+    </p>
 
-<a class="btn" target="_blank"
-href="https://www.tripadvisor.com/Restaurant_Review-g306995-d25337448-Reviews-The_Ocean_Grill-Calangute_North_Goa_District_Goa.html">
-Tripadvisor
-</a>
+    <div class="actions">
 
-<a class="btn" href="#menu">View Menu</a>
+      <a
+        class="btn primary"
+        href="tel:+919356013294">
+        Call +91 93560 13294
+      </a>
 
-</div>
-</div>
+      <a
+        class="btn"
+        target="_blank"
+        rel="noopener"
+        href="https://www.google.com/maps/search/?api=1&query=The%20Ocean%20Grill%20Falcon%20Resort%20Naika%20Vaddo%20Calangute%20Goa">
+        Get Directions
+      </a>
+
+      <a
+        class="btn"
+        target="_blank"
+        rel="noopener"
+        href="https://www.tripadvisor.com/Restaurant_Review-g306995-d25337448-Reviews-The_Ocean_Grill.html">
+        Tripadvisor
+      </a>
+
+      <a
+        class="btn"
+        href="#menu">
+        View Menu
+      </a>
+
+    </div>
+
+  </div>
+
 </header>
 
+
+<!-- ABOUT -->
+
 <section id="about">
-<div class="container">
 
-<div class="section-head">
-<div class="eyebrow">Welcome</div>
-<h2>Good food. Good drinks. Good Goa.</h2>
-</div>
+  <div class="container">
 
-<div class="about">
+    <div class="section-head">
+      <div class="eyebrow">Welcome</div>
+      <h2>Good food. Good drinks. Good Goa.</h2>
+    </div>
 
-<div>
-<p>
-The Ocean Grill Kitchen & Bar is a casual dining destination
-in Calangute, Goa, created for guests who want flavour,
-comfort and a lively atmosphere in one place.
-</p>
+    <div class="about">
 
-<p>
-From Goan favourites to English-inspired dishes, Chinese
-selections and fast-food classics, our menu is designed for
-relaxed meals, evenings with friends and memorable nights in Goa.
-</p>
-</div>
+      <div>
 
-<div class="card">
-<h3>Find us</h3>
-<p>
-Falcon Resort<br>
-Naika Vaddo, Calangute<br>
-Goa 403525, India
-</p>
+        <p>
+          The Ocean Grill Kitchen & Bar is a casual dining
+          destination in Calangute, Goa, created for guests
+          who want flavour, comfort and a lively atmosphere
+          in one place.
+        </p>
 
-<a class="btn primary" target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=The%20Ocean%20Grill%2C%20Falcon%20Resort%2C%20Naika%20Vaddo%2C%20Calangute%2C%20Goa%20403525">
-Open Google Maps
-</a>
-</div>
+        <p>
+          From Goan favourites to English-inspired dishes,
+          Chinese selections and fast-food classics, our menu
+          brings together familiar favourites and bold flavours.
+        </p>
 
-</div>
-</div>
+        <p>
+          Come for the food, stay for the drinks, music,
+          atmosphere and relaxed Goa experience.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Find Us</h3>
+
+        <p>
+          Falcon Resort<br>
+          Naika Vaddo, Calangute<br>
+          Goa 403525, India
+        </p>
+
+        <br>
+
+        <h3>Opening Hours</h3>
+
+        <p>
+          Every Day<br>
+          <strong>12:00 PM – 12:30 AM</strong>
+        </p>
+
+        <br>
+
+        <a
+          class="btn primary"
+          target="_blank"
+          rel="noopener"
+          href="https://www.google.com/maps/search/?api=1&query=The%20Ocean%20Grill%20Falcon%20Resort%20Naika%20Vaddo%20Calangute%20Goa">
+          Open Google Maps
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- CUISINE -->
 
 <section id="cuisine">
-<div class="container">
 
-<div class="section-head">
-<div class="eyebrow">On the menu</div>
-<h2>Flavours for every mood.</h2>
-</div>
+  <div class="container">
 
-<div class="cards">
+    <div class="section-head">
+      <div class="eyebrow">On the menu</div>
+      <h2>Flavours for every mood.</h2>
+    </div>
 
-<div class="card">
-<div class="eyebrow">01</div>
-<h3>Goan Cuisine</h3>
-<p>Local flavours and comforting Goan favourites with the spirit of the coast.</p>
-</div>
+    <div class="cards">
 
-<div class="card">
-<div class="eyebrow">02</div>
-<h3>English Cuisine</h3>
-<p>Familiar classics and hearty plates for guests looking for international comfort food.</p>
-</div>
+      <div class="card">
+        <h3>Goan Cuisine</h3>
+        <p>
+          Local flavours and comforting Goan favourites
+          with the spirit of the coast.
+        </p>
+      </div>
 
-<div class="card">
-<div class="eyebrow">03</div>
-<h3>Chinese</h3>
-<p>Popular Indo-Chinese favourites made for sharing, snacking and easy dining.</p>
-</div>
+      <div class="card">
+        <h3>English Cuisine</h3>
+        <p>
+          Familiar classics and hearty plates for guests
+          looking for international comfort food.
+        </p>
+      </div>
 
-<div class="card">
-<div class="eyebrow">04</div>
-<h3>Bar & Grill</h3>
-<p>A relaxed setting for drinks, grilled favourites and evenings with friends.</p>
-</div>
+      <div class="card">
+        <h3>Chinese Cuisine</h3>
+        <p>
+          Indo-Chinese favourites including noodles,
+          rice, starters and seafood preparations.
+        </p>
+      </div>
 
-</div>
-</div>
+      <div class="card">
+        <h3>Seafood & Grill</h3>
+        <p>
+          Fresh seafood, grills, tandoori favourites
+          and dishes made for sharing.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- MENU -->
 
 <section id="menu">
-<div class="container">
 
-<div class="section-head">
-<div class="eyebrow">The Ocean Grill</div>
-<h2>Our Menu</h2>
-</div>
+  <div class="container">
 
-<p class="menu-intro">
-Explore our complete menu, from Goan seafood and Indian favourites
-to Chinese cuisine, biryani, thalis, desserts and waffles.
-</p>
+    <div class="section-head">
+      <div class="eyebrow">The Ocean Grill</div>
+      <h2>Our Menu</h2>
+    </div>
 
-<div class="menu-grid">
+    <p class="menu-intro">
+      Explore our complete menu, from Goan seafood and
+      Indian favourites to Chinese cuisine, biryani,
+      thalis, desserts and waffles.
+    </p>
 
-<div class="menu-page">
-<img src="menu-1-cover.jpg" alt="The Ocean Grill menu cover">
-</div>
+    <div class="menu-grid">
 
-<div class="menu-page">
-<img src="menu-2-soups-short-eats-momos.jpg"
-alt="Soups, short eats and momos">
-</div>
+      <div class="menu-page">
+        <img
+          src="menu-1-cover.jpg"
+          alt="The Ocean Grill menu cover">
+      </div>
 
-<div class="menu-page">
-<img src="menu-3-seafood.jpg" alt="Seafood menu">
-</div>
+      <div class="menu-page">
+        <img
+          src="menu-2-soups-short-eats-momos.jpg"
+          alt="Soups, short eats and momos menu">
+      </div>
 
-<div class="menu-page">
-<img src="menu-4-starters.jpg" alt="Starters menu">
-</div>
+      <div class="menu-page">
+        <img
+          src="menu-3-seafood.jpg"
+          alt="Seafood menu">
+      </div>
 
-<div class="menu-page">
-<img src="menu-5-main-course.jpg" alt="Main course menu">
-</div>
+      <div class="menu-page">
+        <img
+          src="menu-4-starters.jpg"
+          alt="Starters menu">
+      </div>
 
-<div class="menu-page">
-<img src="menu-6-chinese.jpg" alt="Chinese cuisine menu">
-</div>
+      <div class="menu-page">
+        <img
+          src="menu-5-main-course.jpg"
+          alt="Main course menu">
+      </div>
 
-<div class="menu-page">
-<img src="menu-7-thalis-desserts-waffles.jpg"
-alt="Thalis desserts and waffles menu">
-</div>
+      <div class="menu-page">
+        <img
+          src="menu-6-chinese.jpg"
+          alt="Chinese cuisine menu">
+      </div>
 
-<div class="menu-page">
-<img src="menu-8-biryani-rice-breads-platters.jpg"
-alt="Biryani rice breads and platters menu">
-</div>
+      <div class="menu-page">
+        <img
+          src="menu-7-thalis-desserts-waffles.jpg"
+          alt="Thalis desserts and waffles menu">
+      </div>
 
-</div>
-</div>
+      <div class="menu-page">
+        <img
+          src="menu-8-biryani-rice-breads-platters.jpg"
+          alt="Biryani rice breads and platters menu">
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section>
-<div class="container">
 
-<div class="section-head">
-<div class="eyebrow">Experience</div>
-<h2>A taste of the atmosphere.</h2>
-</div>
-
-<div class="video-wrap">
-<video controls playsinline poster="IMG_20240509_205405.jpg">
-<source src="1000188926.mp4" type="video/mp4">
-Your browser does not support video.
-</video>
-</div>
-
-</div>
-</section>
+<!-- GALLERY -->
 
 <section id="gallery">
-<div class="container">
 
-<div class="section-head">
-<div class="eyebrow">Gallery</div>
-<h2>See The Ocean Grill.</h2>
-</div>
+  <div class="container">
 
-<div class="gallery">
+    <div class="section-head">
+      <div class="eyebrow">Gallery</div>
+      <h2>See The Ocean Grill</h2>
+    </div>
 
-<img class="g1"
-src="IMG_20240403_133943.jpg"
-alt="The Ocean Grill">
+    <div class="gallery">
 
-<img class="g2"
-src="IMG_20240509_205405.jpg"
-alt="Food at The Ocean Grill">
+      <!-- VIDEO -->
 
-<img class="g3"
-src="IMG-20220617-WA0003.jpg"
-alt="Restaurant photo">
+      <video
+        src="1000188926.mp4"
+        controls
+        autoplay
+        muted
+        loop
+        playsinline>
+      </video>
 
-<img class="g4"
-src="IMG-20220816-WA0008.jpg"
-alt="Dining at The Ocean Grill">
 
-<img class="g5"
-src="IMG_20240309_142659.jpg"
-alt="Food and dining">
+      <!-- RESTAURANT PHOTOS -->
 
-<img class="g6"
-src="IMG_20230416_233055.jpg"
-alt="The Ocean Grill atmosphere">
+      <img
+        src="IMG_20240309_142659.jpg"
+        alt="The Ocean Grill">
 
-</div>
-</div>
+      <img
+        src="IMG_20240509_205405.jpg"
+        alt="Food at The Ocean Grill">
+
+      <img
+        src="IMG-20220617-WA0003.jpg"
+        alt="Restaurant at The Ocean Grill">
+
+      <img
+        src="IMG-20220816-WA0008.jpg"
+        alt="Dining at The Ocean Grill">
+
+      <img
+        src="IMG_20240309_142659.jpg"
+        alt="Food and dining">
+
+      <img
+        src="IMG_20230416_233055.jpg"
+        alt="The Ocean Grill atmosphere">
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
-<div class="container">
 
-<div class="section-head">
-<div class="eyebrow">Visit us</div>
-<h2>Come hungry. Leave happy.</h2>
-</div>
+  <div class="container">
 
-<div class="contact">
+    <div class="section-head">
+      <div class="eyebrow">Visit us</div>
+      <h2>Come hungry. Leave happy.</h2>
+    </div>
 
-<div class="contact-box">
-<strong>Address</strong>
-Falcon Resort, Naika Vaddo, Calangute,
-Goa 403525, India
-</div>
+    <div class="contact">
 
-<div class="contact-box">
-<strong>Phone</strong>
-<a href="tel:+919356013294">
-+91 93560 13294
-</a>
-</div>
+      <div class="contact-box">
 
-<div class="contact-box">
-<strong>Directions</strong>
-<a target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=The%20Ocean%20Grill%2C%20Falcon%20Resort%2C%20Naika%20Vaddo%2C%20Calangute%2C%20Goa%20403525">
-Open in Google Maps →
-</a>
-</div>
+        <strong>Address</strong>
 
-<div class="contact-box">
-<strong>Reviews</strong>
-<a target="_blank"
-href="https://www.tripadvisor.com/Restaurant_Review-g306995-d25337448-Reviews-The_Ocean_Grill-Calangute_North_Goa_District_Goa.html">
-View us on Tripadvisor →
-</a>
-</div>
+        Falcon Resort,<br>
+        Naika Vaddo, Calangute,<br>
+        Goa 403525, India
 
-</div>
-</div>
+      </div>
+
+
+      <div class="contact-box">
+
+        <strong>Opening Hours</strong>
+
+        Every Day<br>
+        <b>12:00 PM – 12:30 AM</b>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <strong>Phone</strong>
+
+        <a href="tel:+919356013294">
+          +91 93560 13294
+        </a>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <strong>Directions</strong>
+
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://www.google.com/maps/search/?api=1&query=The%20Ocean%20Grill%20Falcon%20Resort%20Naika%20Vaddo%20Calangute%20Goa">
+          Open in Google Maps →
+        </a>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <strong>Reviews</strong>
+
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://www.tripadvisor.com/Restaurant_Review-g306995-d25337448-Reviews-The_Ocean_Grill.html">
+          View us on Tripadvisor →
+        </a>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <strong>Food Delivery</strong>
+
+        <p>
+          Also available on Swiggy and Zomato.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-<div class="container">
-© 2026 The Ocean Grill Kitchen & Bar • Calangute, Goa
-</div>
+
+  <div class="container">
+
+    © 2026 The Ocean Grill Kitchen & Bar
+    • Calangute, Goa
+
+  </div>
+
 </footer>
+
 
 </body>
 </html>
